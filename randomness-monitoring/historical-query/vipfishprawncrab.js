@@ -6,6 +6,9 @@
             "_id": 0,
             "time": { $dateToParts: { date: "$time" } },
             "result": 1,
+            "selltementResult.anyTriple": 1,
+            "selltementResult.mountain": 1,
+            "selltementResult.ocean": 1,
         } },
         { $set: {
             "time": { $dateFromParts: { year: "$time.year", month: "$time.month", day: "$time.day" } },
