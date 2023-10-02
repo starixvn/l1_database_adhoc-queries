@@ -1,5 +1,5 @@
-{
-    const dbs = l1;
+local.forEach(dbs => {
+    // const dbs = l1;
 
     const data = dbs.minigame_arc.xocxoc_phiens_bk.aggregate([
         { $project: {
@@ -84,5 +84,6 @@
         } },
     ]);
 
+    console.log(dbs);
     console.table(dbs.minigame.xocxoc_metrics.find({}, { _id: 0 }).toArray());
-}
+})
